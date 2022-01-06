@@ -1,0 +1,52 @@
+
+<div class="container-col-md-6">
+    <h3 class="text-light bg-dark text-center border border-warning m-3">Employeement History</h3>
+
+    <form class="container" style="padding: 20px 150px;" (ngSubmit)="empHistoryDetail()">
+        <div class="mb-3">
+            <label for="companyName">Previous Company Name</label>
+            <input type="text" class="form-control" id="ePreComName" name="ePreComName" [(ngModel)]="empHistory.ePreComName" placeholder="Company Name">
+        </div>
+        <!--  -->
+    
+        <div class="mb-3">
+            <label for="role">Role</label>
+            <input type="text" class="form-control" id="ePreComRole" name="ePreComRole" [(ngModel)]="empHistory.ePreComRole" placeholder="Role">
+        </div>
+        <!--  -->
+    
+        <div class="mb-3">
+            <label for="startDate">Start Date</label>
+            <input type="text" class="form-control" id="ePreComStartDate" name="ePreComStartDate" [(ngModel)]="empHistory.ePreComStartDate" placeholder="Start Date">
+        </div>
+        <!--  -->
+    
+        <div class="mb-3">
+            <label for="endDate">End Date</label>
+            <input type="text" class="form-control" id="ePreComEndDate" name="ePreComEndDate" [(ngModel)]="empHistory.ePreComEndDate" placeholder="End Date">
+        </div>
+        <!--  -->
+    
+        <button class="btn btn-success ">Register</button>
+    
+        
+    </form>
+    
+    <!-- onclick event needed -->
+    <button class="btn btn-primary" style="margin-left: 7.5rem" routerLink="/addEmployee">Add Another</button>
+
+</div>
+
+
+<div class="pagination d-flex justify-content-center" >
+    <ul class="pagination pagination-lg">
+      <li class="page-item">
+        <a class="page-link" routerLink="addEmployee" tabindex="-1">1</a>
+      </li>
+      <li class="page-item"><a class="page-link" routerLink="education-detail">2</a></li>
+      <li class="page-item active"><a class="page-link" routerLink="employeement-history">3</a></li>
+    </ul>
+  </div>
+
+
+  <router-outlet></router-outlet>

@@ -1,0 +1,42 @@
+
+<div class="container-col-md-6">
+    <h3 class="text-light bg-dark text-center m-3">Education Details</h3>
+    <form class="container" style="padding: 20px 150px;" (ngSubmit)="empEduDetail()">
+
+        <div class="form-group mb-3">
+            <label for="yearOfPassing">Year Of Passing</label>
+            <input type="text" class="form-control" id="eYop" name="eYop" [(ngModel)]="empEdu.eYop" placeholder="Year Of Passing">
+        </div>
+        <!--   -->
+
+        <div class="form-group mb-3">
+            <label for="instituteName">Institute Name</label>
+            <input type="text" class="form-control" id="eInstituteName" name="eInstituteName" [(ngModel)]="empEdu.eInstituteName" placeholder="Institute Name">
+        </div>
+        <!--  -->
+
+        <div class="form-group mb-3">
+            <label for="percentage">Percentage</label>
+            <input type="text" class="form-control" id="ePercentage" name="ePercentage" [(ngModel)]="empEdu.ePercentage" placeholder="Percentage">
+        </div>
+        <!--  -->
+
+        <button type="submit" class="btn btn-success mt-3">Save</button>
+    </form>
+</div>
+
+
+<div class="pagination d-flex justify-content-center" >
+    <ul class="pagination pagination-lg">
+      <li class="page-item">
+        <a class="page-link" routerLink="addEmployee" tabindex="-1">1</a>
+      </li>
+      <li class="page-item active"><a class="page-link" routerLink="education-detail">2</a></li>
+      <li class="page-item"><a class="page-link" routerLink="employeement-history">3</a></li>
+    </ul>
+  </div>
+
+  <router-outlet></router-outlet>
+
+
+

@@ -1,0 +1,40 @@
+<div class="container-col-md-6">
+    <h3 class="text-light bg-dark text-center m-3">Add Employee</h3>
+    <form class="container" style="padding: 20px 150px;" (ngSubmit)="addEmployeeData()">
+
+        <div class="form-group mb-3">
+            <label for="empID">Employee ID</label>
+            <input type="number" class="form-control" id="eId" name="eId" [(ngModel)]="employee.eId" placeholder="First Name">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="empFname">First Name</label>
+            <input type="text" class="form-control" id="eFName" name="eFName" [(ngModel)]="employee.eFName" placeholder="First Name">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="empLname">Last Name</label>
+            <input type="text" class="form-control" id="eLName" name="eLName" [(ngModel)]="employee.eLName" placeholder="Last Name">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="dateOfBirth">Date Of Birth</label>
+            <input type="text" class="form-control" id="eDob" name="eDob" [(ngModel)]="employee.eDob" placeholder="Date Of Birth">
+        </div>
+
+        <button type="submit" class="btn btn-success">Save</button>
+    </form>
+</div>
+
+
+<div class="pagination d-flex justify-content-center" >
+    <ul class="pagination pagination-lg">
+      <li class="page-item active">
+        <a class="page-link" routerLink="addEmployee" tabindex="-1">1</a>
+      </li>
+      <li class="page-item"><a class="page-link" routerLink="education-detail">2</a></li>
+      <li class="page-item"><a class="page-link" routerLink="employeement-history">3</a></li>
+    </ul>
+  </div>
+
+
